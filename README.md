@@ -1,1 +1,5 @@
-# static
+# Create A Jenkins Pipeline
+
+With this project, we created an instance accessed with an IAM User and its key-pair in the Aws Account. We created a S3 bucket connected to this instance. We accessed the server with the .pem file that was created when we created the key-pair and we made Jenkins and other necessary installations on the server. We installed the relevant plugins at Jenkins, and defined our Aws account as global credentials. We defined the pipeline creation process via the blue ocean plug-in. At this stage, we connected the Github account that we pushed our project.
+
+The Jenkinsfile running the Pipeline consists of two steps: 'Lint' and 'Upload to Aws'. The Lint Stage checks the syntax of our .html file. Upload to Aws, on the other hand, uploads the .html file in the project by using the jenkins credential that we defined in the s3 bucket that we specify in the stage command.
